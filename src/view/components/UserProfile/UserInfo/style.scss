@@ -1,0 +1,35 @@
+.UserInfo {
+  padding: 15px;
+
+  .userProfile {
+    display: flex;
+    align-items: center;
+
+    .userImg {
+      font-size: 40px;
+      border-radius: 100%;
+      width: 1em;
+      height: 1em;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+    .userInfo {
+      .userName {
+        font-size: 14px;
+        margin: 0 0 4px;
+      }
+      .timeAgo {
+        font-size: 12px;
+        margin: 0;
+      }
+    }
+  }
+  .content {
+    padding-top: 15px;
+    p {
+      margin: 0 0 6px;
+      color: #848484;
+      font-size: 14px;
+    }
+  }
+}

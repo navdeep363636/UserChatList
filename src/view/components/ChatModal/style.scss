@@ -1,0 +1,67 @@
+$chatHeaderHeight: 43px;
+$chatInputHeight: 60px;
+
+.chat-container {
+  box-shadow: 0 0 2px 1px #d3d3d3;
+  border-radius: 10px 10px 0 0;
+  width: 284px;
+  height: 351px;
+  background: #fff;
+  bottom: 0;
+  right: 215px;
+  position: fixed;
+  z-index: 99999;
+  .header {
+    padding: 8px;
+    box-shadow: 0 2px 2px 0 #d3d3d3;
+    height: $chatHeaderHeight;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .user {
+      display: flex;
+      align-items: center;
+      .user-img {
+        font-size: 30px;
+        margin-right: 8px;
+      }
+      .user-name {
+        font: {
+          size: 16px;
+          weight: 600;
+        }
+        color: #000;
+        margin: 0;
+      }
+    }
+    .chat-header-options {
+      display: flex;
+      align-items: center;
+      button {
+        cursor: pointer;
+        font-size: 18px;
+        padding: 0;
+        border: 0;
+        margin: 0 6px;
+        background: transparent;
+        color: #0099ff;
+        transition: 0.3s;
+        i {
+          font-size: 16px;
+        }
+        &:hover {
+          color: darken(#0099ff, 10%);
+        }
+      }
+    }
+  }
+  .chat-list-container {
+    width: 100%;
+    overflow: auto;
+    height: calc(100% - #{$chatHeaderHeight} - #{$chatInputHeight});
+  }
+  .chat-input-container {
+    box-shadow: 0 -2px 2px 0 #d3d3d3;
+    height: $chatInputHeight;
+  }
+}

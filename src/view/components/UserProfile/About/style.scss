@@ -1,0 +1,33 @@
+.UserProfileAbout {
+  .UserProfileAboutInputs {
+    border-left: 1px solid #d2d2d2;
+    border-right: 1px solid #d2d2d2;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .TextImage {
+      height: 40px;
+    }
+    .UserProfileAboutFileInputs {
+      display: flex;
+      align-items: center;
+
+      button {
+        background: transparent;
+        border: 0;
+        padding: 0;
+        margin: 0 6px 0 18px;
+        img {
+          height: 27px;
+        }
+      }
+    }
+  }
+}
+
+.Post {
+  .ContentWrapper {
+    border: 1px solid #d2d2d2;
+  }
+}

@@ -1,0 +1,14 @@
+.user-card-wrapper {
+  position: sticky;
+  z-index: 9999;
+  top: 16px;
+  width: 100%;
+  padding: 8px;
+  box-shadow: 0 0 2px 1px #d3d3d3;
+  border-radius: 6px;
+  overflow: auto;
+  max-height: calc(100vh - 32px);
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}

@@ -1,0 +1,44 @@
+.UserCommentInput {
+  padding: 11px 8px;
+  .wrapper {
+    margin-left: auto;
+    margin-right: 0;
+    width: fit-content;
+    position: relative;
+    .commentBtn {
+      border: 2px solid #d4d4d4;
+      height: 40px;
+      border-radius: 40px;
+      background: #ededed;
+      color: #7a7474;
+      padding: 0 15px;
+    }
+    .buttonWapper {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      button {
+        background: transparent;
+        margin: 0 3px;
+        border: 0;
+        padding: 0;
+
+        img {
+          height: 15px;
+        }
+      }
+    }
+    input {
+      outline: none;
+      width: 300px;
+      padding: 0 90px 0 16px;
+      border: 2px solid #d4d4d4;
+      height: 40px;
+      border-radius: 40px;
+      background: #ededed;
+    }
+  }
+}

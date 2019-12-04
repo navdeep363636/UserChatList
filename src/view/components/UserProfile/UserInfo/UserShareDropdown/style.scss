@@ -1,0 +1,54 @@
+.UserShareDropdown {
+  position: relative;
+  margin-left: 4px;
+  .UserShareDropdownToggleBtn {
+    font-size: 8px;
+    padding: 1px 2px;
+  }
+  .UserShareDropdownWrapper {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin-top: 4px;
+    width: 168px;
+    background: #ffffff;
+    box-shadow: 0 0 2px 0 #a9a9a9;
+    padding: 4px 0;
+    button {
+      border: 0;
+      background: rgba(#c8c8c8, 0.3);
+      margin: 2px 0;
+      width: 100%;
+      transition: 0.3s;
+      display: flex;
+      text-align: left;
+      padding: 9px 5px;
+
+      &:hover {
+        background: #5eaefb;
+        color: #fff;
+        p {
+          color: #fff !important;
+        }
+      }
+      .iconWrapper {
+        width: 24px;
+        text-align: right;
+        padding-right: 4px;
+      }
+      .contentWrapper {
+        p {
+          margin: 0;
+          &.name {
+            font-size: 12px;
+            font-weight: 700;
+          }
+          &.text {
+            color: #9b9b9b;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.UserTabs {
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    li {
+      border-left: 1px solid;
+      list-style: none;
+      padding: 6px 8px;
+      &:last-child {
+        border-right: 1px solid;
+      }
+      a {
+        color: #000;
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: none;
+      }
+    }
+  }
+}

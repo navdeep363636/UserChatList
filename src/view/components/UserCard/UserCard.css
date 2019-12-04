@@ -1,0 +1,36 @@
+.user-card {
+  padding: 4px 15px;
+  display: flex;
+  align-items: center;
+
+  background: #89898b;
+}
+.user-img {
+  object-fit: cover;
+  border-radius: 100%;
+  font-size: 30px;
+  width: 1em;
+  height: 1em;
+  margin-right: 8px;
+}
+.user-info {
+  position: relative;
+  flex-grow: 1;
+}
+.user-info::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  background: #4bdd94;
+  border-radius: 100%;
+  font-size: 8px;
+  width: 1em;
+  height: 1em;
+  transform: translateY(-50%);
+}
+.user-name {
+  margin-top: 6px;
+  color: #fff;
+  font-size: 14px;
+}

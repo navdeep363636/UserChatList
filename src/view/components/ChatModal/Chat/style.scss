@@ -1,0 +1,24 @@
+.chats-list {
+  padding: 16px;
+  .chat-msg {
+    &.reciver {
+    }
+    &.sender {
+      .msg {
+        background: #0099ff;
+        color: #fff;
+        margin: {
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+    .msg {
+      max-width: 70%;
+      padding: 4px 14px;
+      border-radius: 15px;
+      background: #eee;
+      width: fit-content;
+    }
+  }
+}

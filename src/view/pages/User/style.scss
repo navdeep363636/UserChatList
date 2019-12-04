@@ -1,0 +1,27 @@
+.ProfileCoverWrapper {
+  position: sticky;
+  top: 16px;
+  z-index: 999;
+}
+
+.TabWrapper {
+  box-shadow: 0 0 2px 0 #656565;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 170px;
+  padding-right: 15px;
+  border-bottom: 3px solid #ce513f;
+  background: #fff;
+  height: 38px;
+  .LogoutBtn {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font-size: 18px;
+    font-weight: 700;
+  }
+}
+
+.UserContent {
+}

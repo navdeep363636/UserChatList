@@ -1,0 +1,31 @@
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  &::before {
+    content: "";
+    position: fixed;
+    left: 212px;
+    right: 212px;
+    top: 0;
+    height: 16px;
+    background: #fff;
+    z-index: 9999999;
+    display: block;
+  }
+  .NewsSidebarWrapper,
+  .UsersSidebarWrapper {
+    padding: 16px 8px;
+    flex: 0 0 215px;
+    max-width: 215px;
+  }
+  .main {
+    padding: 16px 0px;
+    flex: 0 0 calc(100% - 430px);
+    max-width: calc(100% - 430px);
+    position: relative;
+
+    .mainContent {
+      // box-shadow: 0 0 2px 0 #656565;
+    }
+  }
+}
