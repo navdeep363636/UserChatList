@@ -1,7 +1,11 @@
 export default [
   {
-    name: "About",
+    name: "Timeline",
     link: ""
+  },
+  {
+    name: "About",
+    link: "about"
   },
   {
     name: "Friends",

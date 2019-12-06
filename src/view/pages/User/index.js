@@ -1,7 +1,8 @@
 import React from "react";
 import ProfileCover from "../../components/ProfileCover";
 import { Route } from "react-router-dom";
-import { About } from "../../components/UserProfile";
+import { Timeline } from "../../components/UserProfile";
+import About from "./About";
 import Audios from "./Audios";
 import Friends from "./Friends";
 import Pictures from "./Pictures";
@@ -22,7 +23,8 @@ export default () => {
         </div>
       </div>
       <div className="UserContent">
-        <Route exact path={`${base}`} component={About} />
+        <Route exact path={`${base}`} component={Timeline} />
+        <Route path={`${base}/about`} component={About} />
         <Route path={`${base}/audios`} component={Audios} />
         <Route path={`${base}/friends`} component={Friends} />
         <Route path={`${base}/pictures`} component={Pictures} />

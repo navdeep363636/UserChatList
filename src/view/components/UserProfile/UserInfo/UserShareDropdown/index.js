@@ -20,6 +20,7 @@ export default () => {
       <button
         className="UserShareDropdownToggleBtn"
         onClick={() => setDropdown(!dropdown)}
+        onBlur={() => setDropdown(!dropdown)}
       >
         <i className="fas fa-user-friends" style={{ marginRight: 0 }} />
       </button>

@@ -23,7 +23,7 @@ const Categories = [
 	{ icon: AdvertiseIcon, name: "Advertise" },
 	{ icon: ShortenerIcon, name: "Shortener" },
 	{ icon: LockerIcon, name: "Locker" },
-	{ icon: TmpIcon, name: "Tmp" },
+	{ icon: TmpIcon, name: "TMP" },
 	{ icon: DonationIcon, name: "Donation" },
 	{ icon: WalletIcon, name: "Wallet" },
 	{ icon: SettingsIcon, name: "Settings" }
