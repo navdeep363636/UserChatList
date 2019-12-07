@@ -15,9 +15,10 @@ export default () => (
     >
       <div className="ProfileCoverTop">
         <div>
-          <button className="AddCover">
+          <label className="AddCover">
+            <input type="file" className="fileInput" />
             <i className="fas fa-camera" /> Add Cover Photo
-          </button>
+          </label>
         </div>
         <div>
           <div className="search">

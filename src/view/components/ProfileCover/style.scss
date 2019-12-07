@@ -12,15 +12,18 @@
     display: flex;
     justify-content: space-between;
     .AddCover {
+      cursor: pointer;
       background: transparent;
       border: 1px solid #eee;
       color: #eee;
       display: flex;
       align-items: center;
       padding: 8px;
-
       i {
         margin-right: 4px;
+      }
+      .fileInput {
+        display: none;
       }
     }
     .search {
