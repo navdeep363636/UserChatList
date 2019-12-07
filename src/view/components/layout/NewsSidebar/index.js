@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.scss";
+import {Link, withRouter} from "react-router-dom"
 import newsLogo from "../../../../assets/images/newsLogo.png";
 import EmailIcon from "../../../../assets/images/Email.png";
 import MessengerIcon from "../../../../assets/images/Messenger.png";
@@ -28,9 +29,16 @@ const Categories = [
 	{ icon: WalletIcon, name: "Wallet" },
 	{ icon: SettingsIcon, name: "Settings" }
 ];
-export default () => (
-	<div className="newsSidebar">
-		<img className="logo" src={newsLogo} alt="logo" />
+export default withRouter((props) => {
+	console.log(props)
+	return<>	<div className="newsSidebar">
+		<Link to={props.location.pathname === "/profileimage"?"/user":"/profileimage"}>
+			<img className="logo" src={
+				props.location.pathname !== "/profileimage"
+				?
+				newsLogo
+				:"https://www.thefamouspeople.com/profiles/images/robert-downey-jr--2.jpg"} alt="logo" />
+		</Link>
 		<div className="socialIcons">
 			<img src={EmailIcon} alt="" />
 			<img src={NotificationsIcon} alt="" />
@@ -64,5 +72,5 @@ export default () => (
 				</button>
 			</div>
 		</div>
-	</div>
-);
+	</div></>
+})

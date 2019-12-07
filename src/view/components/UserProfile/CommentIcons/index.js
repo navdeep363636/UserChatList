@@ -32,8 +32,9 @@ export default class CommentIcons extends React.Component {
 		if (id !== "Comment" && id !== "Share") {
 			const smiles = this.state.smiles.slice();
 			const index = _.findIndex(smiles, { id: id });
-			smiles[index] = { ...smiles[index], value: smiles[index].value + 1 };
-			this.setState({ smiles });
+			if(smiles[index].value <1)
+			{smiles[index] = { ...smiles[index], value: smiles[index].value + 1 };
+			this.setState({ smiles });}
 		} else if (id === "Comment") {
 			const { comment, index } = this.props;
 			const comments = comment.slice();
