@@ -1,22 +1,32 @@
-import React from "react";
+import React , {useState} from "react";
 import "./style.scss";
-
 import ProgileDropdown from "./ProfileDropdown";
-const coverImage =
-  "https://images.unsplash.com/photo-1525208494498-108c4b831740?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80";
 
+
+
+// setCoverImage(e.target)
 const userImg =
   "https://www.thefamouspeople.com/profiles/images/robert-downey-jr--2.jpg";
-export default () => (
-  <div className="ProfileCover">
+export default () => {
+  const [coverImg, setCoverImage] = useState("https://images.unsplash.com/photo-1525208494498-108c4b831740?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80");
+
+
+
+  return <div className="ProfileCover">
     <div
       className="CoverImage"
-      style={{ background: `url(${coverImage}) center / cover` }}
+      style={{ background: `url(${coverImg}) center / cover` }}
     >
       <div className="ProfileCoverTop">
         <div>
           <label className="AddCover">
-            <input type="file" className="fileInput" />
+            <input type="file" className="fileInput" onChange={(e)=>{
+              const file = e.target.files[0];
+
+              const reader = new FileReader();
+              reader.onload = function(evt) { return setCoverImage(evt.target.result); };
+              reader.readAsDataURL(file);
+            }}/>
             <i className="fas fa-camera" /> Add Cover Photo
           </label>
         </div>
@@ -50,4 +60,4 @@ export default () => (
       </div>
     </div>
   </div>
-);
+};
