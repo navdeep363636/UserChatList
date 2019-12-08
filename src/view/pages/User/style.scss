@@ -25,3 +25,33 @@
 
 .UserContent {
 }
+.coveOptionsBtns {
+  display: flex;
+  align-items: center;
+  p {
+    i {
+      font-size: 12px;
+      margin-right: 4px;
+    }
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 8px;
+  }
+  .btn {
+    border-radius: 2px;
+    border: 1px solid #ccd0d5;
+    height: 27px;
+
+    &.cancel {
+      background-color: #f5f6f7;
+
+      color: #4b4f56;
+    }
+    &.save {
+      background-color: #4267b2;
+      border-color: #4267b2;
+      color: #fff;
+      margin-left: 4px;
+    }
+  }
+}

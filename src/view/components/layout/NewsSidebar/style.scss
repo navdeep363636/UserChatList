@@ -1,64 +1,73 @@
 .newsSidebar {
-	padding: 8px;
-	border: 1px solid #edebec;
-	border-radius: 10px;
-	position: sticky;
-	top: 16px;
-	.logo {
-		display: block;
-		margin: auto;
-		height: 118px;
-	}
-	.socialIcons {
-		padding: 10px 8px;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		img {
-			height: 32px;
-		}
-	}
-	.CategoriesContainer {
-		.CategoriesLink{
-			text-decoration: none;
-		}
-		button {
-			border: 1px solid #e6e6e6;
-			box-shadow: 0 0 1px 0 #2a2a2a;
-			margin: 3px 0;
-			display: flex;
-			align-items: center;
-			width: 100%;
-			background: transparent;
-			height: 40px;
-			font: {
-				size: 18px;
-				weight: 700;
-			}
-			img {
-				margin-right: 4px;
-				height: 30px;
-			}
-		}
-	}
-	.AAW {
-		padding-top: 8px;
-		display: flex;
-		justify-content: space-between;
-		button {
-			opacity: 0.6;
+  padding: 8px;
+  border: 1px solid #edebec;
+  border-radius: 10px;
+  position: sticky;
+  top: 16px;
+  .logo {
+    display: block;
+    margin: auto;
+    height: 118px;
+  }
+  .userIcon {
+    display: block;
+    margin: auto;
+    box-shadow: 0 0 3px 0 #424242;
+    object-fit: cover;
+    width: 118px;
+    height: 118px;
+    border: 5px solid #fff;
+  }
+  .socialIcons {
+    padding: 10px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img {
+      height: 32px;
+    }
+  }
+  .CategoriesContainer {
+    .CategoriesLink {
+      text-decoration: none;
+    }
+    button {
+      border: 1px solid #e6e6e6;
+      box-shadow: 0 0 1px 0 #2a2a2a;
+      margin: 3px 0;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      background: transparent;
+      height: 40px;
+      font: {
+        size: 18px;
+        weight: 700;
+      }
+      img {
+        margin-right: 4px;
+        height: 30px;
+      }
+    }
+  }
+  .AAW {
+    padding-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    button {
+      opacity: 0.6;
 
-			background: transparent;
-			border: 0;
-			padding: 0;
-			margin: 0;
-			text-align: center;
-			font-size: 10px;
-			font-weight: 700;
-			img {
-				opacity: 0.7;
-				height: 25px;
-			}
-		}
-	}
+      background: transparent;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      font-size: 10px;
+      font-weight: 700;
+      img {
+        opacity: 0.7;
+        height: 25px;
+      }
+    }
+  }
 }

@@ -19,7 +19,17 @@ export default () => {
         <ProfileCover />
         <div className="TabWrapper">
           <UserTabs />
-          <button className="LogoutBtn">Logout</button>
+          <div>
+            {/* <div className="coveOptionsBtns">
+              <p>
+                <i class="fas fa-globe-asia" />
+                Public
+              </p>
+              <button className="btn cancel">Cancel</button>
+              <button className="btn save">Save Changes</button>
+            </div> */}
+            <button className="LogoutBtn">Logout</button>
+          </div>
         </div>
       </div>
       <div className="UserContent">
