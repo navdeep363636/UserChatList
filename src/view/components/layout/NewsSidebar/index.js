@@ -19,76 +19,74 @@ import Android from "../../../../assets/images/Android.png";
 import Windows from "../../../../assets/images/Windows.png";
 
 const Categories = [
-  { icon: CategoriesIcon, name: "Categories", route: "/categories" },
-  { icon: StoreIcon, name: "Store", route: "/store" },
-  { icon: AdvertiseIcon, name: "Advertise", route: "/advertise" },
-  { icon: ShortenerIcon, name: "Shortener", route: "/shortener" },
-  { icon: LockerIcon, name: "Locker", route: "/locker" },
-  { icon: TmpIcon, name: "TMP", route: "/tmp" },
-  { icon: DonationIcon, name: "Donation", route: "/donation" },
-  { icon: WalletIcon, name: "Wallet", route: "/wallet" },
-  { icon: SettingsIcon, name: "Settings", route: "/settings" }
+	{ icon: CategoriesIcon, name: "Categories", route: "/categories" },
+	{ icon: StoreIcon, name: "Store", route: "/store" },
+	{ icon: AdvertiseIcon, name: "Advertise", route: "/advertise" },
+	{ icon: ShortenerIcon, name: "Shortener", route: "/shortener" },
+	{ icon: LockerIcon, name: "Locker", route: "/locker" },
+	{ icon: TmpIcon, name: "TMP", route: "/tmp" },
+	{ icon: DonationIcon, name: "Donation", route: "/donation" },
+	{ icon: WalletIcon, name: "Wallet", route: "/wallet" },
+	{ icon: SettingsIcon, name: "Settings", route: "/settings" }
 ];
 export default withRouter(props => {
-  console.log(props);
-  return (
-    <>
-      <div className="newsSidebar">
-        <Link
-          to={
-            props.location.pathname === "/profileimage"
-              ? "/user"
-              : "/profileimage"
-          }
-        >
-          <img
-            className={
-              props.location.pathname !== "/profileimage" ? "logo" : "userIcon"
-            }
-            src={
-              props.location.pathname !== "/profileimage"
-                ? newsLogo
-                : "https://www.thefamouspeople.com/profiles/images/robert-downey-jr--2.jpg"
-            }
-            alt="logo"
-          />
-        </Link>
-        <div className="socialIcons">
-          <img src={EmailIcon} alt="" />
-          <img src={NotificationsIcon} alt="" />
-          <img src={MessengerIcon} alt="" />
-        </div>
-        <div className="CategoriesContainer">
-          {Categories.map(({ icon, name, route }) => (
-            <Link to={route} className="CategoriesLink">
-              <button>
-                <img src={icon} alt="" />
-                {name}
-              </button>
-            </Link>
-          ))}
-        </div>
-        <div className="AAW">
-          <div>
-            <button>
-              <img src={Apple} alt="" />
-              Apple
-            </button>
-          </div>
-          <div>
-            <button>
-              <img src={Android} alt="" />
-              Android
-            </button>
-          </div>
-          <div>
-            <button>
-              <img src={Windows} alt="" />
-              Windows
-            </button>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+	console.log(props);
+	return (
+		<>
+			<div className="newsSidebar">
+				<Link to={props.location.pathname === "/profileimage" ? "/user" : "/profileimage"}>
+					<img
+						className={props.location.pathname !== "/profileimage" ? "logo" : "userIcon"}
+						src={
+							props.location.pathname !== "/profileimage"
+								? newsLogo
+								: "https://www.thefamouspeople.com/profiles/images/robert-downey-jr--2.jpg"
+						}
+						alt="logo"
+					/>
+				</Link>
+				<div className="socialIcons">
+					<Link to="email">
+						<img src={EmailIcon} alt="" />
+					</Link>
+					<Link to="notification">
+						<img src={NotificationsIcon} alt="" />
+					</Link>
+					<Link to="messanger">
+						<img src={MessengerIcon} alt="" />
+					</Link>
+				</div>
+				<div className="CategoriesContainer">
+					{Categories.map(({ icon, name, route }) => (
+						<Link to={route} className="CategoriesLink">
+							<button>
+								<img src={icon} alt="" />
+								{name}
+							</button>
+						</Link>
+					))}
+				</div>
+				<div className="AAW">
+					<div>
+						<button>
+							<img src={Apple} alt="" />
+							Apple
+						</button>
+					</div>
+					<div>
+						<button>
+							<img src={Android} alt="" />
+							Android
+						</button>
+					</div>
+					<div>
+						<button>
+							<img src={Windows} alt="" />
+							Windows
+						</button>
+					</div>
+				</div>
+			</div>
+		</>
+	);
 });

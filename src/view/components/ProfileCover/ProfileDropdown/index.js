@@ -15,10 +15,10 @@ export default () => {
 	];
 	return (
 		<div className="ProfileDropdown">
-			<button className="ProfileDropdownToggleBtn"
-				onBlur={() => setDropdown(!dropdown)}
-				onClick={() => setDropdown(!dropdown)}
-			>
+			<button
+				className="ProfileDropdownToggleBtn"
+				onBlur={() => setDropdown(false)}
+				onClick={() => setDropdown(!dropdown)}>
 				<i className="fas fa-eye-dropper" style={{ marginRight: 0 }} />
 			</button>
 			{dropdown && (

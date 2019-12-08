@@ -13,7 +13,10 @@ import {
 	Shortener,
 	Wallet,
 	Store,
-	Tmp
+	Tmp,
+	Notification,
+	Messanger,
+	Email
 } from "./view/pages/SideTabs";
 
 /* Renders the white card wrapper for users list*/
@@ -36,6 +39,9 @@ export default class App extends Component {
 							<Route path="/store" component={Store} />
 							<Route path="/tmp" component={Tmp} />
 							<Route path="/wallet" component={Wallet} />
+							<Route path="/notification" component={Notification} />
+							<Route path="/messanger" component={Messanger} />
+							<Route path="/email" component={Email} />
 						</Switch>
 					</Layout>
 				</Router>

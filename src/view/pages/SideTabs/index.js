@@ -7,3 +7,6 @@ export { default as Shortener } from "./Shortener";
 export { default as Store } from "./Store";
 export { default as Tmp } from "./Tmp";
 export { default as Wallet } from "./Wallet";
+export { default as Notification } from "./Notification";
+export { default as Messanger } from "./Messanger";
+export { default as Email } from "./Email";
