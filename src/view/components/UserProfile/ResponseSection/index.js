@@ -6,34 +6,30 @@ import CommentInput from "../CommentInput";
 import Comments from "../Comments";
 
 export default class ResponseSection extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { comment: [{}, {}, {}, {}, {}, {}, {}, {}] };
-  }
+	constructor(props) {
+		super(props);
+		this.state = { posts: [{}, {}, {}, {}, {}, {}, {}, {}] };
+	}
 
-  setComments = comment => {
-    this.setState({ comment });
-  };
+	setPosts = posts => {
+		this.setState({ posts });
+	};
 
-  render() {
-    const { comment } = this.state;
-    return (
-      <>
-        {comment.map(({ active = false }, index) => (
-          <div className="Post" key={index}>
-            <div className="ContentWrapper">
-              <UserInfo />
-              <CommentIcons
-                setComments={this.setComments}
-                comment={comment}
-                index={index}
-              />
-              <Comments />
-            </div>
-            {active && <CommentInput />}
-          </div>
-        ))}
-      </>
-    );
-  }
+	render() {
+		const { posts } = this.state;
+		return (
+			<>
+				{posts.map(({ active = false }, index) => (
+					<div className="Post" key={index}>
+						<div className="ContentWrapper">
+							<UserInfo />
+							<CommentIcons setComments={this.setPosts} comment={posts} index={index} />
+							{active && <Comments />}
+						</div>
+						{active && <CommentInput />}
+					</div>
+				))}
+			</>
+		);
+	}
 }

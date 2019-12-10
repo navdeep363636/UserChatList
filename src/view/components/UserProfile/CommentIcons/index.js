@@ -24,17 +24,22 @@ export default class CommentIcons extends React.Component {
 				{ id: "Angry", icon: AngryIcon, value: 0 },
 				{ id: "Comment", icon: CommentIcon, value: 0, className: "MsgCommentIcon" },
 				{ id: "Share", icon: ShareIcon, value: 0 },
-				{ id: "Count", icon: CountIcon, value: 0, className: "count" }
+				{ id: "Count", icon: CountIcon, value: 0, className: "count" },
+				{ id: "Boost", icon: CountIcon, value: "" }
 			]
 		};
 	}
 	smileHandler = id => {
 		if (id !== "Comment" && id !== "Share") {
 			const smiles = this.state.smiles.slice();
-			const index = _.findIndex(smiles, { id: id });
-			if(smiles[index].value <1)
-			{smiles[index] = { ...smiles[index], value: smiles[index].value + 1 };
-			this.setState({ smiles });}
+			const isAlreadyResponded = _.find(smiles, { value: 1 });
+			if (!isAlreadyResponded) {
+				const index = _.findIndex(smiles, { id: id });
+				if (smiles[index].value < 1) {
+					smiles[index] = { ...smiles[index], value: smiles[index].value + 1 };
+					this.setState({ smiles });
+				}
+			}
 		} else if (id === "Comment") {
 			const { comment, index } = this.props;
 			const comments = comment.slice();
@@ -50,7 +55,7 @@ export default class CommentIcons extends React.Component {
 					{smiles.map(({ className = "", value, icon, id }, index) => (
 						<div key={index} className={`CommentIcon ${className}`}>
 							<img src={icon} alt={value} onClick={() => this.smileHandler(id)} />
-							<p>{value}</p>
+							{id !== "Boost" && <p>{value}</p>}
 						</div>
 					))}
 				</div>

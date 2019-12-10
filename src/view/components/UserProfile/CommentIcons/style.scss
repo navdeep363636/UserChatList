@@ -7,6 +7,12 @@
     .CommentIcon {
       padding: 0 16px;
       text-align: center;
+      &i{
+        font: {
+          size: 24px;
+          weight: 700;
+        }
+      }
       &.count {
         display: flex;
         align-items: center;
