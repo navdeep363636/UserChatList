@@ -7,30 +7,106 @@ import VideoImage from "../../../../assets/images/Video.png";
 import LiveImage from "../../../../assets/images/Live.png";
 import ResponseSection from "../ResponseSection";
 import CreateNewPost from "../CreateNewPost";
-export default () => (
-  <div className="UserProfileAbout">
-    <div className="UserProfileAboutInputs">
-      <div>
-        <CreateNewPost />
-      </div>
-      <div className="UserProfileAboutFileInputs">
-        <button>
-          <img src={LiveImage} alt="LiveImage" />
-        </button>
-        <button>
-          <img src={cameraBlackImage} alt="cameraBlackImage" />
-        </button>
-        <button>
-          <img src={AudioImage} alt="AudioImage" />
-        </button>
-        <button>
-          <img src={VideoImage} alt="VideoImage" />
-        </button>
-        <button>
-          <i style={{ fontSize: 26 }} class="fas fa-ellipsis-h" />
-        </button>
-      </div>
-    </div>
-    <ResponseSection />
-  </div>
-);
+export default class Timeline extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			posts: [
+				{
+					postMessage: {
+						first: "Lorem ispume thso fjd fjgn defgfner",
+						second: "spume thr",
+						third: "Lorem ispume ther"
+					}
+				},
+				{
+					postMessage: {
+						first: "Lorem ispume thso fjd fjgn defgfner",
+						second: "spume thr",
+						third: "Lorem ispume ther"
+					}
+				},
+				{
+					postMessage: {
+						first: "Lorem ispume thso fjd fjgn defgfner",
+						second: "spume thr",
+						third: "Lorem ispume ther"
+					}
+				},
+				{
+					postMessage: {
+						first: "Lorem ispume thso fjd fjgn defgfner",
+						second: "spume thr",
+						third: "Lorem ispume ther"
+					}
+				},
+				{
+					postMessage: {
+						first: "Lorem ispume thso fjd fjgn defgfner",
+						second: "spume thr",
+						third: "Lorem ispume ther"
+					}
+				},
+				{
+					postMessage: {
+						first: "Lorem ispume thso fjd fjgn defgfner",
+						second: "spume thr",
+						third: "Lorem ispume ther"
+					}
+				},
+				{
+					postMessage: {
+						first: "Lorem ispume thso fjd fjgn defgfner",
+						second: "spume thr",
+						third: "Lorem ispume ther"
+					}
+				},
+				{
+					postMessage: {
+						first: "Lorem ispume thso fjd fjgn defgfner",
+						second: "spume thr",
+						third: "Lorem ispume ther"
+					}
+				}
+			]
+		};
+	}
+
+	setPosts = posts => {
+		this.setState({ posts });
+	};
+
+	addPost = details => {
+		const prevPosts = this.state.posts.slice();
+		this.setState({ posts: prevPosts.push({ postMessage: { first: details } }) });
+	};
+	render() {
+		return (
+			<div className="UserProfileAbout">
+				<div className="UserProfileAboutInputs">
+					<div>
+						<CreateNewPost />
+					</div>
+					<div className="UserProfileAboutFileInputs">
+						<button>
+							<img src={LiveImage} alt="LiveImage" />
+						</button>
+						<button>
+							<img src={cameraBlackImage} alt="cameraBlackImage" />
+						</button>
+						<button>
+							<img src={AudioImage} alt="AudioImage" />
+						</button>
+						<button>
+							<img src={VideoImage} alt="VideoImage" />
+						</button>
+						<button>
+							<i style={{ fontSize: 26 }} class="fas fa-ellipsis-h" />
+						</button>
+					</div>
+				</div>
+				<ResponseSection setPosts={this.setPosts} addPost={this.addPost} posts={this.state.posts} />
+			</div>
+		);
+	}
+}
