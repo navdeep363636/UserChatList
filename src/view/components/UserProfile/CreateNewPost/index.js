@@ -23,6 +23,15 @@ export default class CreateNewPost extends React.Component {
 				<div className="tab">
 					<TextPostab postText={postText} setPostText={this.setPostText} />
 				</div>
+				<button
+					style={{
+						background: "#0099ff",
+						color: "#fff",
+						padding: "6px 12px",
+						borderRadius: 4
+					}}>
+					Post
+				</button>
 			</div>
 		);
 	}

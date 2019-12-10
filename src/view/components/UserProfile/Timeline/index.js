@@ -78,7 +78,6 @@ export default class Timeline extends React.Component {
 
 	addPost = details => {
 		const prevPosts = this.state.posts.slice();
-		debugger;
 		let newPosts = [{ postMessage: { first: details } }];
 		newPosts.push(prevPosts);
 		this.setState({
@@ -93,15 +92,6 @@ export default class Timeline extends React.Component {
 						<CreateNewPost addPost={this.addPost} />
 					</div>
 					<div className="UserProfileAboutFileInputs">
-						<button
-							style={{
-								background: "#0099ff",
-								color: "#fff",
-								padding: "6px 12px",
-								borderRadius: 4
-							}}>
-							Post
-						</button>
 						<button>
 							<img src={LiveImage} alt="LiveImage" />
 						</button>
