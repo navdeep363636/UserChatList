@@ -71,6 +71,18 @@
         padding: 8px;
         margin-right: 10px;
         background: #fff;
+        position: relative;
+        .uploadProfile {
+          cursor: pointer;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          input {
+            display: none;
+          }
+        }
       }
       .UserImage {
         font-size: 126px;

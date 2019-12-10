@@ -21,11 +21,8 @@ const HeaderOptions = props => (
     <button>
       <i className="fas fa-phone-alt" />
     </button>
-    <button>
-      <i className="fas fa-cog" />
-    </button>
-    <button>
-      <i className="fas fa-times" onClick={() => props.openUserChat(false)} />
+    <button onClick={() => props.openUserChat(false)}>
+      <i className="fas fa-times" />
     </button>
   </div>
 );

@@ -24,16 +24,14 @@ export default () => {
           <button>
             <i className="fas fa-smile" />
           </button>
-          <button>
-            <i className="fas fa-gamepad" />
-          </button>
+
           <button>
             <i className="fas fa-paperclip" />
           </button>
         </div>
-        <button className="enter-thumb">
+        {/* <button className="enter-thumb">
           <i class="fas fa-thumbs-up"></i>
-        </button>
+        </button> */}
       </div>
     </div>
   );
