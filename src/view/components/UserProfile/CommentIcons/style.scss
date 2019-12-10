@@ -9,6 +9,12 @@
       text-align: center;
       i {
         font-size: 40px;
+        color: #939393;
+      }
+      &.share {
+        img {
+          opacity: 0.4;
+        }
       }
       &.count {
         display: flex;

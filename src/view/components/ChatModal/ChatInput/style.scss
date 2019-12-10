@@ -26,10 +26,13 @@
       font-size: 18px;
       padding: 0;
       border: 0;
-      margin: 0 10px;
+      margin: 0 4px;
       background: transparent;
       color: #bdc5cb;
       transition: 0.3s;
+      img {
+        height: 18px;
+      }
       &:hover {
         color: darken(#bdc5cb, 10%);
       }

@@ -42,7 +42,7 @@ export default class User extends React.Component {
               )}
               {!showConfirmButtons && (
                 <button className="LogoutBtn">
-                  <i className="fas fa-sign-out-alt" />
+                  <i className="fas fa-power-off" />
                 </button>
               )}
             </div>

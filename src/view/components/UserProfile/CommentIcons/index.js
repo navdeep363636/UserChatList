@@ -28,7 +28,7 @@ export default class CommentIcons extends React.Component {
           value: 0,
           className: "MsgCommentIcon"
         },
-        { id: "Share", icon: ShareIcon, value: 0 },
+        { id: "Share", icon: ShareIcon, value: 0, className: "share" },
         { id: "Count", icon: CountIcon, value: 0, className: "count" },
         {
           id: "Boost",
