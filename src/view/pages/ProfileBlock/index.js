@@ -1,5 +1,67 @@
 import React from "react";
-export default () => <div >
-    <img src="https://www.thefamouspeople.com/profiles/images/robert-downey-jr--2.jpg"
-     style={{height:"620px",width:"935px"}}/>
-    </div>;
+import { ProfileSlider } from "../../components/Slider";
+import Post from "../../components/UserProfile/ResponseSection";
+const postData = [
+  {
+    postMessage: {
+      first: "Lorem ispume thso fjd fjgn defgfner",
+      second: "spume thr",
+      third: "Lorem ispume ther"
+    }
+  },
+  {
+    postMessage: {
+      first: "Lorem ispume thso fjd fjgn defgfner",
+      second: "spume thr",
+      third: "Lorem ispume ther"
+    }
+  },
+  {
+    postMessage: {
+      first: "Lorem ispume thso fjd fjgn defgfner",
+      second: "spume thr",
+      third: "Lorem ispume ther"
+    }
+  },
+  {
+    postMessage: {
+      first: "Lorem ispume thso fjd fjgn defgfner",
+      second: "spume thr",
+      third: "Lorem ispume ther"
+    }
+  },
+  {
+    postMessage: {
+      first: "Lorem ispume thso fjd fjgn defgfner",
+      second: "spume thr",
+      third: "Lorem ispume ther"
+    }
+  },
+  {
+    postMessage: {
+      first: "Lorem ispume thso fjd fjgn defgfner",
+      second: "spume thr",
+      third: "Lorem ispume ther"
+    }
+  },
+  {
+    postMessage: {
+      first: "Lorem ispume thso fjd fjgn defgfner",
+      second: "spume thr",
+      third: "Lorem ispume ther"
+    }
+  },
+  {
+    postMessage: {
+      first: "Lorem ispume thso fjd fjgn defgfner",
+      second: "spume thr",
+      third: "Lorem ispume ther"
+    }
+  }
+];
+export default () => (
+  <div>
+    <ProfileSlider />
+    <Post posts={postData} />
+  </div>
+);
