@@ -62,7 +62,9 @@ export default () => (
                 </InfoWrapper>
               </ImageNameWrapper>
               <ButtonWrapper>
-                <BlueBtn>dfhd</BlueBtn>
+                <BlueBtn>
+                  <i className="fas fa-user-plus" /> dfhd
+                </BlueBtn>
                 <GreyBtn>fedef</GreyBtn>
               </ButtonWrapper>
             </RequestCard>

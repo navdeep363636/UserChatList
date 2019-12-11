@@ -87,6 +87,9 @@ export const BlueBtn = styled("bitton")`
   height: 24px;
   display: flex;
   align-items: center;
+  i {
+    margin-right: 4px;
+  }
 `;
 export const GreyBtn = styled("button")`
   border: 1px solid;
