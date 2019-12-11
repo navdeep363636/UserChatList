@@ -3,16 +3,11 @@ import "./style.scss";
 import ProgileDropdown from "./ProfileDropdown";
 
 // setCoverImage(e.target)
-export default () => {
-	const [coverImg, setCoverImage] = useState(
-		"https://images.unsplash.com/photo-1525208494498-108c4b831740?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
-	);
-	const [profileImg, setProfileImage] = useState(
-		"https://www.thefamouspeople.com/profiles/images/robert-downey-jr--2.jpg"
-	);
+export default props => {
+	const { profileImg, setProfileImage, coverImg, setCoverImage, newProfileImg, newCoverImg } = props;
 	return (
 		<div className="ProfileCover">
-			<div className="CoverImage" style={{ background: `url(${coverImg}) center / cover` }}>
+			<div className="CoverImage" style={{ background: `url(${newCoverImg || coverImg}) center / cover` }}>
 				<div className="ProfileCoverTop">
 					<div>
 						<label className="AddCover">
@@ -44,7 +39,7 @@ export default () => {
 				<div className="ProfileCoverBottom">
 					<div className="ProfileCoverUser">
 						<div className="UserImageWrapper">
-							<img className="UserImage" src={profileImg} alt="" />
+							<img className="UserImage" src={newProfileImg || profileImg} alt="" />
 							<label className="uploadProfile">
 								<input
 									type="file"

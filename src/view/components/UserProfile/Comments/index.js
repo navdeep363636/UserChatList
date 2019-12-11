@@ -1,19 +1,19 @@
 import React from "react";
 import "./style.scss";
-const temp = [{}, {}];
 const user = "https://www.thefamouspeople.com/profiles/images/robert-downey-jr--2.jpg";
-export default () => (
+export default props => (
 	<>
-		{temp.map(() => (
-			<div className="Comments">
+		{props.comments.map((data, key) => (
+			<div className="Comments" key={key}>
 				<div className="profileBox">
 					<img className="avatar" src={user} alt="" />
 				</div>
 				<div className="commentBox">
-					{temp.map(() => (
-						<div className="commentWrapper">
+					{props.comments.map((comment, key) => (
+						<div className="commentWrapper" key={key}>
 							<p className="comment">
-								<a className="user">Navdeep</a> njdfhfhd dnfjed efhbewd
+								<a className="user">Navdeep</a>
+								{comment}
 							</p>
 						</div>
 					))}

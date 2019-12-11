@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.scss";
+import _ from "lodash";
 import TextImage from "../../../../assets/images/Text.png";
 import AudioImage from "../../../../assets/images/Audio.png";
 import cameraBlackImage from "../../../../assets/images/cameraBlack.png";
@@ -80,8 +81,9 @@ export default class Timeline extends React.Component {
 		const prevPosts = this.state.posts.slice();
 		let newPosts = [{ postMessage: { first: details } }];
 		newPosts.push(prevPosts);
+		const posts = _.flattenDeep(newPosts);
 		this.setState({
-			posts: newPosts
+			posts
 		});
 	};
 	render() {
