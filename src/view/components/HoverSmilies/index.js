@@ -18,11 +18,9 @@ export default ({ children }) => (
 );
 const IconWrapper = styled("div")`
   position: absolute;
-  background: #fff;
-  padding: 4px 4px;
+
+  padding: 0 0 2px;
   bottom: 100%;
-  box-shadow: 0 0 3px 0 #9b9b9b;
-  border-radius: 6px;
 `;
 const Root = styled("div")`
   position: relative;
@@ -37,6 +35,12 @@ const Root = styled("div")`
 const IconContainer = styled("div")`
   display: flex;
   align-items: center;
+  box-shadow: 0 0 3px 0 #9b9b9b;
+
+  padding: 4px 4px;
+  background: #fff;
+  border-radius: 6px;
+  margin-bottom: 8px;
 `;
 const IconButton = styled("button")`
   background: transparent;

@@ -52,6 +52,7 @@ const CommentButton = styled("button")`
   font-size: 12px;
   line-height: 12px;
   margin-left: 18px;
+  display: block;
 `;
 const TimeAgo = styled("p")`
   color: #606770;
