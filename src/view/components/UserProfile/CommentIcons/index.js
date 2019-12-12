@@ -45,7 +45,16 @@ export default class CommentIcons extends React.Component {
 			const smiles = this.state.smiles.slice();
 			const isAlreadyResponded = _.findIndex(smiles, { value: 1 });
 
-			if (isAlreadyResponded !== -1) {
+			if (isAlreadyResponded === -1) {
+				const index = _.findIndex(smiles, { id: id });
+				if (smiles[index].value < 1) {
+					smiles[index] = { ...smiles[index], value: smiles[index].value + 1 };
+					this.setState({ smiles });
+				}
+			} else {
+				smiles.forEach(element => {
+					element.value = 0;
+				});
 				const index = _.findIndex(smiles, { id: id });
 				if (smiles[index].value < 1) {
 					smiles[index] = { ...smiles[index], value: smiles[index].value + 1 };
