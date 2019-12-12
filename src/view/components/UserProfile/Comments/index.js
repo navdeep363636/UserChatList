@@ -1,8 +1,11 @@
 import React from "react";
+import HoverSmilies from "../../HoverSmilies";
 import "./style.scss";
 import styled from "styled-components";
+
 const user =
   "https://www.thefamouspeople.com/profiles/images/robert-downey-jr--2.jpg";
+
 export default props => (
   <>
     {props.comments.map((data, key) => (
@@ -15,12 +18,16 @@ export default props => (
             <>
               <div className="commentWrapper" key={key}>
                 <p className="comment">
-                  <a className="user">Navdeep</a>
+                  <a className="user" href="#">
+                    Navdeep
+                  </a>
                   {comment}
                 </p>
               </div>
               <CommentButtonWrapper>
-                <CommentButton>Like</CommentButton>
+                <HoverSmilies>
+                  <CommentButton>Like</CommentButton>
+                </HoverSmilies>
                 <CommentButton>Reply</CommentButton>
                 <TimeAgo>30m</TimeAgo>
               </CommentButtonWrapper>
@@ -34,6 +41,7 @@ export default props => (
 
 const CommentButtonWrapper = styled("div")`
   display: flex;
+  align-items: center;
   margin-bottom: 1rem;
 `;
 const CommentButton = styled("button")`
