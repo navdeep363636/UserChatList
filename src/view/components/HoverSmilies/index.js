@@ -1,11 +1,11 @@
 import React from "react";
 import { Smilies } from "../../../shared/sharedArray";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export default ({ children }) => (
+export default ({ children, center = false }) => (
   <Root>
     {children}
-    <IconWrapper>
+    <IconWrapper centre={center}>
       <IconContainer>
         {Smilies.map(({ icon }, index) => (
           <IconButton key={index}>
@@ -18,9 +18,14 @@ export default ({ children }) => (
 );
 const IconWrapper = styled("div")`
   position: absolute;
-
   padding: 0 0 2px;
   bottom: 100%;
+  ${({ center }) =>
+    center &&
+    css`
+      left: 50%;
+      transform: translateX(-50%);
+    `};
 `;
 const Root = styled("div")`
   position: relative;
