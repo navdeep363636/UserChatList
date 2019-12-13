@@ -2,6 +2,7 @@ import React from "react";
 import "./style.scss";
 import Chat from "./Chat";
 import ChatInput from "./ChatInput";
+import { Link } from "react-router-dom";
 const User = () => (
   <div className="user">
     <img
@@ -15,12 +16,12 @@ const User = () => (
 );
 const HeaderOptions = props => (
   <div className="chat-header-options">
-    <button>
+    <Link to="/call" target="_blank">
       <i className="fas fa-video" />
-    </button>
-    <button>
+    </Link>
+    <Link to="/call" target="_blank">
       <i className="fas fa-phone-alt" />
-    </button>
+    </Link>
     <button onClick={() => props.openUserChat(false)}>
       <i className="fas fa-times" />
     </button>

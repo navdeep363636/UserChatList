@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Layout from "./view/components/layout";
 import User from "./view/pages/User";
 import ProfileBlock from "./view/pages/ProfileBlock";
+import Call from "./view/pages/Call";
 import FriendRequests from "./view/pages/FriendRequests";
 import {
   Advertise,
@@ -35,6 +36,7 @@ export default class App extends Component {
             <Switch>
               <Route path="/user" component={User} />
               <Route path="/friend-requests" component={FriendRequests} />
+              <Route path="/call" component={Call} />
 
               <Route path="/profileimage" component={ProfileBlock} />
               <Route path="/advertise" component={Advertise} />

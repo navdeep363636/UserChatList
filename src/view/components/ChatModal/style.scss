@@ -37,7 +37,8 @@ $chatInputHeight: 60px;
     .chat-header-options {
       display: flex;
       align-items: center;
-      button {
+      button,
+      a {
         cursor: pointer;
         font-size: 18px;
         padding: 0;
