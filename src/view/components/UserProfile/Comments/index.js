@@ -1,43 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 import HoverSmilies from "../../HoverSmilies";
 import "./style.scss";
 import styled from "styled-components";
-
+import CommentInput from "../CommentInput";
+import { Smilies } from "../../../../shared/sharedArray";
+const Comments = ({ comment }) => {
+  const [isReply, setIsReply] = useState(false);
+  return (
+    <>
+      <div className="commentWrapper">
+        <p className="comment">
+          {/* <div>
+            <img src={Smilies[0].icon} />
+          </div> */}
+          <a className="user" href="#">
+            Navdeep
+          </a>
+          {comment}
+        </p>
+      </div>
+      <CommentButtonWrapper>
+        <HoverSmilies>
+          <CommentButton>Like</CommentButton>
+        </HoverSmilies>
+        <CommentButton onClick={() => setIsReply(true)}>Reply</CommentButton>
+        <TimeAgo>30m</TimeAgo>
+      </CommentButtonWrapper>
+      {isReply && <CommentInput />}
+    </>
+  );
+};
 const user =
   "https://www.thefamouspeople.com/profiles/images/robert-downey-jr--2.jpg";
 
-export default props => (
-  <>
-    {props.comments.map((data, key) => (
-      <div className="Comments" key={key}>
-        <div className="profileBox">
-          <img className="avatar" src={user} alt="" />
+export default props => {
+  return (
+    <>
+      {props.comments.map((data, key) => (
+        <div className="Comments" key={key}>
+          <div className="profileBox">
+            <img className="avatar" src={user} alt="" />
+          </div>
+          <div className="commentBox">
+            {props.comments.map((comment, key) => (
+              <Comments key={key} comment={comment} />
+            ))}
+          </div>
         </div>
-        <div className="commentBox">
-          {props.comments.map((comment, key) => (
-            <>
-              <div className="commentWrapper" key={key}>
-                <p className="comment">
-                  <a className="user" href="#">
-                    Navdeep
-                  </a>
-                  {comment}
-                </p>
-              </div>
-              <CommentButtonWrapper>
-                <HoverSmilies>
-                  <CommentButton>Like</CommentButton>
-                </HoverSmilies>
-                <CommentButton>Reply</CommentButton>
-                <TimeAgo>30m</TimeAgo>
-              </CommentButtonWrapper>
-            </>
-          ))}
-        </div>
-      </div>
-    ))}
-  </>
-);
+      ))}
+    </>
+  );
+};
 
 const CommentButtonWrapper = styled("div")`
   display: flex;

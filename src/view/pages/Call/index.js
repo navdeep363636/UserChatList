@@ -7,7 +7,11 @@ export default () => {
   return (
     <Root>
       <div></div>
-      <div></div>
+      <ProfileWrapper>
+        <Profile src="https://www.thefamouspeople.com/profiles/images/robert-downey-jr--2.jpg" />
+        <h2>Razat Verma</h2>
+        <p>Connecting...</p>
+      </ProfileWrapper>
       <CallButtonsWrapper>
         <CallButtons onClick={() => setMicrophone(!microphone)}>
           <i
@@ -37,9 +41,25 @@ const Root = styled("div")`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 30px;
+  padding: 30px 15px;
 `;
+const ProfileWrapper = styled("div")`
+  text-align: center;
+  color: #fff;
+  p {
+    opacity: 0.7;
+  }
+`;
+const Profile = styled("img")`
+  width: 1em;
+  height: 1em;
+  font-size: 100px;
+  border-radius: 100%;
+  object-fit: cover;
 
+  display: block;
+  margin: auto;
+`;
 const CallButtonsWrapper = styled("div")`
   display: flex;
   justify-content: center;
@@ -50,7 +70,7 @@ const CallButtons = styled("button")`
   border-radius: 100%;
   font-size: 20px;
   border: 0;
-  margin: 0 6px;
+  margin: 0 12px;
   background: ${({ call }) => (call ? "#fe443f" : "#333333")};
   color: #fff;
 `;
