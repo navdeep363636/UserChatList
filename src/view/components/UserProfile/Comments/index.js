@@ -9,10 +9,11 @@ const Comments = ({ comment }) => {
   return (
     <>
       <div className="commentWrapper">
+        <Reaction>
+          <img src={Smilies[0].icon} />
+          <img src={Smilies[2].icon} />
+        </Reaction>
         <p className="comment">
-          {/* <div>
-            <img src={Smilies[0].icon} />
-          </div> */}
           <a className="user" href="#">
             Navdeep
           </a>
@@ -57,6 +58,17 @@ const CommentButtonWrapper = styled("div")`
   align-items: center;
   margin-bottom: 1rem;
 `;
+const Reaction = styled("div")`
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: calc(100% - 4px);
+  img {
+    height: 14px;
+    margin-right: 3px;
+  }
+`;
+
 const CommentButton = styled("button")`
   border: 0;
   padding: 0;
