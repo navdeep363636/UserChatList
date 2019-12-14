@@ -76,7 +76,7 @@ export default () => (
         <div key={index} className={className}>
           <p className="msg">
             <InconWrapper left={person === "sender"}>
-              <HoverSmilies center>
+              <HoverSmilies chatModal left={person !== "sender"}>
                 <i className="far fa-smile" />
               </HoverSmilies>
             </InconWrapper>

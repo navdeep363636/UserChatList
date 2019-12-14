@@ -2,13 +2,18 @@ import React from "react";
 import { Smilies } from "../../../shared/sharedArray";
 import styled, { css } from "styled-components";
 
-export default ({ children, center = false }) => (
+export default ({
+  children,
+  center = false,
+  left = false,
+  chatModal = false
+}) => (
   <Root>
     {children}
-    <IconWrapper centre={center}>
+    <IconWrapper left={left} centre={center}>
       <IconContainer>
         {Smilies.map(({ icon }, index) => (
-          <IconButton key={index}>
+          <IconButton chatModal={chatModal} key={index}>
             <img src={icon} alt="" />
           </IconButton>
         ))}
@@ -20,6 +25,11 @@ const IconWrapper = styled("div")`
   position: absolute;
   padding: 0 0 2px;
   bottom: 100%;
+  ${({ left }) =>
+    left &&
+    css`
+      right: 0;
+    `};
   ${({ center }) =>
     center &&
     css`
@@ -52,6 +62,7 @@ const IconButton = styled("button")`
   border: 0;
   padding: 0;
   margin: 0 4px;
+
   &:hover {
     img {
       transform: scale(1.2);
@@ -60,4 +71,12 @@ const IconButton = styled("button")`
   img {
     height: 18px;
   }
+  ${({ chatModal }) =>
+    chatModal &&
+    css`
+      margin: 0 2px;
+      img {
+        height: 12px;
+      }
+    `};
 `;
