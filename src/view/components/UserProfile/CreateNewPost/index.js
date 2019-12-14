@@ -1,5 +1,5 @@
 import React from "react";
-import { Root } from "./style";
+import { Root, Drop } from "./style";
 
 import TextPostab from "./TextPostTab";
 
@@ -21,39 +21,42 @@ export default class CreateNewPost extends React.PureComponent {
   };
 
   render() {
-    const { postText } = this.state;
+    const { postText, active } = this.state;
     return (
-      <Root>
-        <div className="createPostBtn">
-          <button>
-            <i class="fas fa-pencil-alt"></i>Create post
-          </button>
-          <button>
-            <i class="fas fa-camera"></i>Photo/Video
-          </button>
-          <button>
-            <i class="fas fa-video"></i>Live video
-          </button>
-          <button>
-            <i class="fas fa-flag"></i>Life Event
-          </button>
-        </div>
-        <div className="tab">
-          <TextPostab postText={postText} setPostText={this.setPostText} />
-          <button
-            onClick={this.submitPost}
-            style={{
-              background: "#0099ff",
-              color: "#fff",
-              padding: "6px 12px",
-              borderRadius: 4,
-              border: 0
-            }}
-          >
-            Post
-          </button>
-        </div>
-      </Root>
+      <>
+        {active && <Drop onClick={() => this.setState({ active: false })} />}
+        <Root active={active}>
+          <div className="createPostBtn">
+            <button onClick={() => this.setState({ active: true })}>
+              <i class="fas fa-pencil-alt"></i>Create post
+            </button>
+            <button>
+              <i class="fas fa-camera"></i>Photo/Video
+            </button>
+            <button>
+              <i class="fas fa-video"></i>Live video
+            </button>
+            <button>
+              <i class="fas fa-flag"></i>Life Event
+            </button>
+          </div>
+          <div className="tab">
+            <TextPostab postText={postText} setPostText={this.setPostText} />
+            <button
+              onClick={this.submitPost}
+              style={{
+                background: "#0099ff",
+                color: "#fff",
+                padding: "6px 12px",
+                borderRadius: 4,
+                border: 0
+              }}
+            >
+              Post
+            </button>
+          </div>
+        </Root>
+      </>
     );
   }
 }
