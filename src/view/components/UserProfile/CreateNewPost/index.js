@@ -1,5 +1,5 @@
 import React from "react";
-import { Root, Drop } from "./style";
+import { Root } from "./style";
 
 import TextPostab from "./TextPostTab";
 
@@ -22,11 +22,10 @@ export default class CreateNewPost extends React.PureComponent {
 
   render() {
     const { postText, active } = this.state;
-    const { handleCreatingNewPost, isCreatingNewPost } = this.props
+    const { handleCreatingNewPost, isCreatingNewPost } = this.props;
     return (
       <>
-        {isCreatingNewPost && <Drop onClick={() => handleCreatingNewPost(false)} />}
-        <Root active={isCreatingNewPost}>
+        <Root>
           <div className="createPostBtn">
             <button onClick={() => handleCreatingNewPost(true)}>
               <i class="fas fa-pencil-alt"></i>Create post
