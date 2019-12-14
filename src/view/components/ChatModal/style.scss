@@ -34,27 +34,6 @@ $chatInputHeight: 60px;
         margin: 0;
       }
     }
-    .chat-header-options {
-      display: flex;
-      align-items: center;
-      button,
-      a {
-        cursor: pointer;
-        font-size: 18px;
-        padding: 0;
-        border: 0;
-        margin: 0 6px;
-        background: transparent;
-        color: #0099ff;
-        transition: 0.3s;
-        i {
-          font-size: 16px;
-        }
-        &:hover {
-          color: darken(#0099ff, 10%);
-        }
-      }
-    }
   }
   .chat-list-container {
     width: 100%;
@@ -64,5 +43,26 @@ $chatInputHeight: 60px;
   .chat-input-container {
     box-shadow: 0 -2px 2px 0 #d3d3d3;
     height: $chatInputHeight;
+  }
+}
+.chat-header-options {
+  display: flex;
+  align-items: center;
+  button,
+  a {
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0;
+    border: 0;
+    margin: 0 6px;
+    background: transparent;
+    color: #0099ff;
+    transition: 0.3s;
+    i {
+      font-size: 16px;
+    }
+    &:hover {
+      color: darken(#0099ff, 10%);
+    }
   }
 }

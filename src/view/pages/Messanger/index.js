@@ -1,6 +1,7 @@
 import React from "react";
 import { UserList, ChatList, Profile } from "../../components/Messanger";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 export default () => (
   <Root>
     <UserListWrapper>
@@ -8,11 +9,24 @@ export default () => (
     </UserListWrapper>
     <PersonWrapper>
       <PersonHeader>
-        <ProfileImage
-          size={40}
-          src="https://www.thefamouspeople.com/profiles/images/robert-downey-jr--2.jpg"
-        />
-        <h2>Navdeep</h2>
+        <div className="d-flex align-items-center">
+          <ProfileImage
+            size={40}
+            src="https://www.thefamouspeople.com/profiles/images/robert-downey-jr--2.jpg"
+          />
+          <h2>Navdeep</h2>
+        </div>
+        <div className="chat-header-options">
+          <Link to="/call" target="_blank">
+            <i className="fas fa-video" />
+          </Link>
+          <Link to="/call" target="_blank">
+            <i className="fas fa-phone-alt" />
+          </Link>
+          <button>
+            <i className="fas fa-times" />
+          </button>
+        </div>
       </PersonHeader>
       <ChatListWrapper>
         <ChatList />
@@ -53,6 +67,7 @@ const PersonHeader = styled("div")`
   left: 0;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   z-index: 999;
 `;
 const ProfileImage = styled("img")`
