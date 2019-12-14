@@ -1,3 +1,7 @@
 import React from "react";
-
-export default () => <div></div>;
+import Chat from "../../ChatModal/Chat";
+export default () => (
+  <div>
+    <Chat />
+  </div>
+);
