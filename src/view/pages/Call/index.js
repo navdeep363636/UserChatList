@@ -13,6 +13,9 @@ export default () => {
         <p>Connecting...</p>
       </ProfileWrapper>
       <CallButtonsWrapper>
+        <CallButtons>
+          <i className="far fa-clone" />
+        </CallButtons>
         <CallButtons onClick={() => setMicrophone(!microphone)}>
           <i
             style={{ opacity: microphone ? 1 : 0.5 }}

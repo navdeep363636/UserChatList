@@ -6,6 +6,7 @@ import User from "./view/pages/User";
 import ProfileBlock from "./view/pages/ProfileBlock";
 import Call from "./view/pages/Call";
 import FriendRequests from "./view/pages/FriendRequests";
+import MessangerPage from "./view/pages/Messanger";
 import {
   Advertise,
   Categories,
@@ -27,13 +28,14 @@ export default class App extends Component {
     return (
       <>
         <Router>
-          <Layout>
+          <Switch>
+            <Route path="/messages" component={MessangerPage} />
             <Route
               exact
               path="/"
               component={() => (window.location.href = "/user")}
             />
-            <Switch>
+            <Layout>
               <Route path="/user" component={User} />
               <Route path="/friend-requests" component={FriendRequests} />
               <Route path="/call" component={Call} />
@@ -51,8 +53,8 @@ export default class App extends Component {
               <Route path="/notification" component={Notification} />
               <Route path="/messanger" component={Messanger} />
               <Route path="/email" component={Email} />
-            </Switch>
-          </Layout>
+            </Layout>
+          </Switch>
         </Router>
       </>
     );
