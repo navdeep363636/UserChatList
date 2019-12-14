@@ -80,6 +80,7 @@ export default withRouter(props => {
             <div>
               <FriendRequestDropDown active={isFriendRequestSent}>
                 <button
+                  style={{ marginRight: 15 }}
                   className="profile-btn"
                   onClick={() => setIsFriendRequestSent(true)}
                 >
@@ -89,6 +90,7 @@ export default withRouter(props => {
               </FriendRequestDropDown>
             </div>
             <button
+              style={{ marginRight: 15 }}
               className="profile-btn"
               onClick={() => handleChatModal(true)}
             >

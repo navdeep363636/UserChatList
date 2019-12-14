@@ -30,7 +30,7 @@ export default class CreateNewPost extends React.PureComponent {
             <button onClick={() => handleCreatingNewPost(true)}>
               <i class="fas fa-pencil-alt"></i>Create post
             </button>
-            <button>
+            {/* <button>
               <i class="fas fa-camera"></i>Photo/Video
             </button>
             <button>
@@ -38,7 +38,7 @@ export default class CreateNewPost extends React.PureComponent {
             </button>
             <button>
               <i class="fas fa-flag"></i>Life Event
-            </button>
+            </button> */}
           </div>
           <div className="tab">
             <TextPostab postText={postText} setPostText={this.setPostText} />
