@@ -50,6 +50,22 @@ const chatMock = [
   {
     person: "reciver",
     msg: "Lorem Lorem "
+  },
+  {
+    person: "sender",
+    msg: "Lorem Lorem "
+  },
+  {
+    person: "reciver",
+    msg: "Lorem Lorem "
+  },
+  {
+    person: "sender",
+    msg: "Lorem Lorem "
+  },
+  {
+    person: "reciver",
+    msg: "Lorem Lorem "
   }
 ];
 export default () => (
