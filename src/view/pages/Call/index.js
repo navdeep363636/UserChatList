@@ -9,7 +9,7 @@ export default () => {
       <div></div>
       <ProfileWrapper>
         <Profile src="https://www.thefamouspeople.com/profiles/images/robert-downey-jr--2.jpg" />
-        <h2>Razat Verma</h2>
+        <h2>Navdeep Singh</h2>
         <p>Connecting...</p>
       </ProfileWrapper>
       <CallButtonsWrapper>
@@ -21,7 +21,7 @@ export default () => {
             style={{ opacity: microphone ? 1 : 0.5 }}
             className={`fas ${
               microphone ? "fa-microphone" : "fa-microphone-slash"
-            }`}
+              }`}
           ></i>
         </CallButtons>
         <CallButtons onClick={() => setVideo(!video)}>

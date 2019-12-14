@@ -13,7 +13,7 @@ export default class CommentInput extends React.Component {
 	_handleKeyUp = e => {
 		if (e.keyCode === 13) {
 			this.setState({ value: "" });
-			this.props.addComment(e.target.value);
+			this.props.addComment && this.props.addComment(e.target.value);
 		}
 	};
 
@@ -22,11 +22,12 @@ export default class CommentInput extends React.Component {
 	};
 	render() {
 		const { value } = this.state;
+		const { type } = this.props
 		return (
 			<div className="UserCommentInput">
 				<div className="wrapper">
 					<input
-						placeholder="Write a comment..."
+						placeholder={`Write a ${type}...`}
 						value={value}
 						onKeyUp={this._handleKeyUp}
 						onChange={this.handleChange}

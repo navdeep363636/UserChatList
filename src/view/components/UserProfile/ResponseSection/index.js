@@ -34,7 +34,7 @@ export default class ResponseSection extends Component {
               />
               {active && <Comments comments={comments} />}
             </div>
-            {active && <CommentInput addComment={this.addComment} />}
+            {active && <CommentInput addComment={this.addComment} type={"comment"} />}
           </div>
         ))}
       </>

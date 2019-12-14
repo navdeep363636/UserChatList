@@ -27,7 +27,7 @@ const Comments = ({ comment }) => {
         <CommentButton onClick={() => setIsReply(true)}>Reply</CommentButton>
         <TimeAgo>30m</TimeAgo>
       </CommentButtonWrapper>
-      {isReply && <CommentInput />}
+      {isReply && <CommentInput type={"reply"} />}
     </>
   );
 };

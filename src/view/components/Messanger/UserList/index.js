@@ -15,7 +15,7 @@ export default () => (
         <UserWrapper key={index} active={index === 0}>
           <Profile src="https://www.thefamouspeople.com/profiles/images/robert-downey-jr--2.jpg" />
           <div>
-            <h2>Razat Verma</h2>
+            <h2>Navdeep Singh</h2>
             <p>
               {byYou && "You: "}
               {lastIcon ? <img src={lastIcon} alt="" /> : lastMsg} . {timeAgo}

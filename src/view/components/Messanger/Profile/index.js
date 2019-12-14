@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export default () => (
   <div className="text-center" style={{ padding: "30px 12px" }}>
     <Profile src="https://www.thefamouspeople.com/profiles/images/robert-downey-jr--2.jpg" />
-    <Name>Razat Verma</Name>
+    <Name>Navdeep Singh</Name>
     <TimeAgo>Active 1H ago</TimeAgo>
   </div>
 );
