@@ -6,7 +6,7 @@ import TextPostab from "./TextPostTab";
 export default class CreateNewPost extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.state = { postText: "", active: false };
+    this.state = { postText: "" };
   }
 
   setPostText = val => {
@@ -22,12 +22,13 @@ export default class CreateNewPost extends React.PureComponent {
 
   render() {
     const { postText, active } = this.state;
+    const { handleCreatingNewPost, isCreatingNewPost } = this.props
     return (
       <>
-        {active && <Drop onClick={() => this.setState({ active: false })} />}
-        <Root active={active}>
+        {isCreatingNewPost && <Drop onClick={() => handleCreatingNewPost(false)} />}
+        <Root active={isCreatingNewPost}>
           <div className="createPostBtn">
-            <button onClick={() => this.setState({ active: true })}>
+            <button onClick={() => handleCreatingNewPost(true)}>
               <i class="fas fa-pencil-alt"></i>Create post
             </button>
             <button>

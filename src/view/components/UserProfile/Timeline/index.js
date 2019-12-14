@@ -77,6 +77,10 @@ export default class Timeline extends React.Component {
 		this.setState({ posts });
 	};
 
+	handleCreatingNewPost = (val) => {
+		this.setState({ isCreatingNewPost: val })
+	}
+
 	addPost = details => {
 		const prevPosts = this.state.posts.slice();
 		let newPosts = [{ postMessage: { first: details } }];
@@ -87,11 +91,12 @@ export default class Timeline extends React.Component {
 		});
 	};
 	render() {
+		const { isCreatingNewPost } = this.state
 		return (
 			<div className="UserProfileAbout">
 				<div className="UserProfileAboutInputs">
 					<div>
-						<CreateNewPost addPost={this.addPost} />
+						<CreateNewPost isCreatingNewPost={isCreatingNewPost} addPost={this.addPost} handleCreatingNewPost={this.handleCreatingNewPost} />
 					</div>
 					<div className="UserProfileAboutFileInputs">
 						<button>
