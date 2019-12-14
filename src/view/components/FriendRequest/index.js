@@ -37,8 +37,8 @@ export default () => (
                 </InfoWrapper>
               </ImageNameWrapper>
               <ButtonWrapper>
-                <BlueBtn>dfhd</BlueBtn>
-                <GreyBtn>fedef</GreyBtn>
+                <BlueBtn>Confirm</BlueBtn>
+                <GreyBtn>Cancel</GreyBtn>
               </ButtonWrapper>
             </RequestCard>
           ))}
@@ -63,9 +63,9 @@ export default () => (
               </ImageNameWrapper>
               <ButtonWrapper>
                 <BlueBtn>
-                  <i className="fas fa-user-plus" /> dfhd
+                  <i className="fas fa-user-plus" /> Add Friend
                 </BlueBtn>
-                <GreyBtn>fedef</GreyBtn>
+                <GreyBtn>Cancel</GreyBtn>
               </ButtonWrapper>
             </RequestCard>
           ))}
