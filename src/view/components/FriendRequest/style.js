@@ -1,7 +1,8 @@
 import styled from "styled-components";
 export const Root = styled("div")``;
 export const Wrapper = styled("div")`
-  margin-left: 0;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 20px;
   width: 695px;
   background-color: #fff;

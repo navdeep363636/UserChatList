@@ -6,12 +6,21 @@ export default () => (
     <UserListWrapper>
       <UserList />
     </UserListWrapper>
-    <ChatListWrapper>
-      <ChatList />
-    </ChatListWrapper>
-    <ProfileWrapper>
-      <Profile />
-    </ProfileWrapper>
+    <PersonWrapper>
+      <PersonHeader>
+        <ProfileImage
+          size={40}
+          src="https://www.thefamouspeople.com/profiles/images/robert-downey-jr--2.jpg"
+        />
+        <h2>Navdeep</h2>
+      </PersonHeader>
+      <ChatListWrapper>
+        <ChatList />
+      </ChatListWrapper>
+      <ProfileWrapper>
+        <Profile />
+      </ProfileWrapper>
+    </PersonWrapper>
   </Root>
 );
 
@@ -26,11 +35,47 @@ const UserListWrapper = styled("div")`
   flex: 0 0 ${user}px;
   max-width: ${user}px;
   height: 100%;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+`;
+
+const PersonHeader = styled("div")`
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 0 8px;
+  border-bottom: 1px solid #d2d2d2;
+  height: 64px;
+  background: white;
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  z-index: 999;
+`;
+const ProfileImage = styled("img")`
+  width: 1em;
+  height: 1em;
+  font-size: 40px;
+  border-radius: 100%;
+  object-fit: cover;
+  margin-right: 12px;
+`;
+
+const PersonWrapper = styled("div")`
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 calc(100% - ${user}px);
+  max-width: calc(100% - ${user}px);
+  border-left: 1px solid #d2d2d2;
+  border-right: 1px solid #d2d2d2;
+  height: 100%;
 `;
 const ChatListWrapper = styled("div")`
-  flex: 0 0 calc(100% - ${user + profile}px);
-  max-width: calc(100% - ${user + profile}px);
-  border-left: 1px solid #d2d2d2;
+  flex: 0 0 calc(100% - ${profile}px);
+  max-width: calc(100% - ${profile}px);
   border-right: 1px solid #d2d2d2;
   height: 100%;
 `;
