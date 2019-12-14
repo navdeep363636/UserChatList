@@ -65,7 +65,14 @@ export const InfoWrapper = styled("div")``;
 export const PersonName = styled("h3")`
   color: #385898;
   font-weight: bold;
+  margin: 0;
 `;
+export const Mutual = styled("p")`
+  color: #606770;
+  font-size: 14px;
+  margin: 0;
+`;
+
 export const ButtonWrapper = styled("div")`
   display: flex;
   align-items: center;

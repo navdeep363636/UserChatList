@@ -11,6 +11,7 @@ import {
   ImageWrapper,
   InfoWrapper,
   PersonName,
+  Mutual,
   ButtonWrapper,
   BlueBtn,
   GreyBtn
@@ -51,7 +52,7 @@ export default () => (
       </Header>
       <ListWrapper>
         <ListHolder>
-          {friendSuggestion.map(() => (
+          {friendSuggestion.map(({ mutule = false }) => (
             <RequestCard>
               <ImageNameWrapper>
                 <ImageWrapper>
@@ -59,6 +60,12 @@ export default () => (
                 </ImageWrapper>
                 <InfoWrapper>
                   <PersonName>User Name</PersonName>
+                  {mutule && (
+                    <Mutual>
+                      <i className="fas fa-user-friends" /> {mutule} mutual
+                      friends
+                    </Mutual>
+                  )}
                 </InfoWrapper>
               </ImageNameWrapper>
               <ButtonWrapper>
