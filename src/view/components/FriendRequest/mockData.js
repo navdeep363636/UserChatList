@@ -1,3 +1,3 @@
 export const friendRequest = [{}, {}, {}];
 
-export const friendSuggestion = [{}, {}, { mutule: 15 }, {}, {}, {}];
+export const friendSuggestion = [{ mutule: 2 }, {}, { mutule: 15 }, {}, {}, {}];
