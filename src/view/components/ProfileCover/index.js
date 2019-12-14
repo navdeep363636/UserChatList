@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./style.scss";
-import ChatModal from "../ChatModal"
+import ChatModal from "../ChatModal";
 import ProgileDropdown from "./ProfileDropdown";
 import { withRouter } from "react-router-dom";
 // setCoverImage(e.target)
 export default withRouter(props => {
-  const [showChatModal, handleChatModal] = useState(false)
+  const [showChatModal, handleChatModal] = useState(false);
   const {
     profileImg,
     setProfileImage,
@@ -31,7 +31,7 @@ export default withRouter(props => {
                   const file = e.target.files[0];
 
                   const reader = new FileReader();
-                  reader.onload = function (evt) {
+                  reader.onload = function(evt) {
                     return setCoverImage(evt.target.result);
                   };
                   reader.readAsDataURL(file);
@@ -64,7 +64,7 @@ export default withRouter(props => {
                     const file = e.target.files[0];
 
                     const reader = new FileReader();
-                    reader.onload = function (evt) {
+                    reader.onload = function(evt) {
                       return setProfileImage(evt.target.result);
                     };
                     reader.readAsDataURL(file);
@@ -75,16 +75,24 @@ export default withRouter(props => {
             <h2 className="UserName">Im Arifullah</h2>
           </div>
           <div className="ProfileButtons">
-            <button onClick={() => history.push("/friend-requests")}>
+            <button
+              className="profile-btn"
+              onClick={() => history.push("/friend-requests")}
+            >
               <i className="fas fa-user-plus" />
               Add Friend
             </button>
-            <button onClick={() => handleChatModal(true)}>
+            <button
+              className="profile-btn"
+              onClick={() => handleChatModal(true)}
+            >
               <i className="fab fa-facebook-messenger" />
               Message
             </button>
-            {showChatModal && <ChatModal openUserChat={() => handleChatModal(false)} />}
-            <ProgileDropdown />
+            {showChatModal && (
+              <ChatModal openUserChat={() => handleChatModal(false)} />
+            )}
+            <ProgileDropdown btnClassName="profile-btn" />
           </div>
         </div>
       </div>
