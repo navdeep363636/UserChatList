@@ -3,9 +3,11 @@ import "./style.scss";
 import ChatModal from "../ChatModal";
 import ProgileDropdown from "./ProfileDropdown";
 import { withRouter } from "react-router-dom";
+import { FriendRequestDropDown } from "../DropDown";
 // setCoverImage(e.target)
 export default withRouter(props => {
   const [showChatModal, handleChatModal] = useState(false);
+  const [isFriendRequestSent, setIsFriendRequestSent] = useState(false);
   const {
     profileImg,
     setProfileImage,
@@ -75,13 +77,17 @@ export default withRouter(props => {
             <h2 className="UserName">Im Arifullah</h2>
           </div>
           <div className="ProfileButtons">
-            <button
-              className="profile-btn"
-              onClick={() => history.push("/friend-requests")}
-            >
-              <i className="fas fa-user-plus" />
-              Add Friend
-            </button>
+            <div>
+              <FriendRequestDropDown active={isFriendRequestSent}>
+                <button
+                  className="profile-btn"
+                  onClick={() => setIsFriendRequestSent(true)}
+                >
+                  <i className="fas fa-user-plus" />
+                  {!isFriendRequestSent ? "Add Friend" : "Friend Request Sent"}
+                </button>
+              </FriendRequestDropDown>
+            </div>
             <button
               className="profile-btn"
               onClick={() => handleChatModal(true)}
