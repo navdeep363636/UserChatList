@@ -86,7 +86,6 @@ const PersonWrapper = styled("div")`
   max-width: calc(100% - ${user}px);
   border-left: 1px solid #d2d2d2;
   border-right: 1px solid #d2d2d2;
-  height: 100%;
 `;
 const ChatListWrapper = styled("div")`
   flex: 0 0 calc(100% - ${profile}px);
