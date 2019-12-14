@@ -91,10 +91,8 @@ const ChatListWrapper = styled("div")`
   flex: 0 0 calc(100% - ${profile}px);
   max-width: calc(100% - ${profile}px);
   border-right: 1px solid #d2d2d2;
-  height: 100%;
 `;
 const ProfileWrapper = styled("div")`
   flex: 0 0 ${profile}px;
   max-width: ${profile}px;
-  height: 100%;
 `;

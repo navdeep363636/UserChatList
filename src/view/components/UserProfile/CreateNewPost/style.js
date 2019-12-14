@@ -1,4 +1,8 @@
-.createNewPost {
+import styled from "styled-components";
+
+export const Root = styled("div")`
+  position: relative;
+  z-index: 99;
   .createPostBtn {
     display: flex;
     align-items: center;
@@ -18,4 +22,4 @@
     display: flex;
     align-items: center;
   }
-}
+`;
