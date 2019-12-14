@@ -24,6 +24,7 @@ const Root = styled("div")`
   padding: 0 8px;
 `;
 const UserWrapper = styled("div")`
+  cursor: pointer;
   display: flex;
   align-items: center;
   padding: 0 8px;
