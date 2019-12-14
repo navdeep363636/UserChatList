@@ -73,7 +73,7 @@ export default withRouter(props => {
             <h2 className="UserName">Im Arifullah</h2>
           </div>
           <div className="ProfileButtons">
-            <button>
+            <button onClick={() => history.push("/friend-requests")}>
               <i className="fas fa-user-plus" />
               Add Friend
             </button>
