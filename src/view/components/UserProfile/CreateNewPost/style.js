@@ -16,6 +16,7 @@ export const Root = styled("div")`
     active &&
     css`
       z-index: 999999999;
+      box-shadow: -3px 0px 0 14px #fff;
       background: #fff;
     `};
   .createPostBtn {
