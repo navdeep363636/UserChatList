@@ -23,9 +23,9 @@ export default () => (
           <Link to="/call" target="_blank">
             <i className="fas fa-phone-alt" />
           </Link>
-          <button>
+          <Link to="/user">
             <i className="fas fa-times" />
-          </button>
+          </Link>
         </div>
       </PersonHeader>
       <ChatListWrapper>
